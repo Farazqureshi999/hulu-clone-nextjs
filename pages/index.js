@@ -2,7 +2,6 @@ import Head from 'next/head'
 import Header from '../components/Header'
 import Nav from '../components/Nav'
 import Result from '../components/Result'
-import styles from '../styles/Home.module.css'
 import request from '../utils/request'
 
 
