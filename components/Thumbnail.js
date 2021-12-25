@@ -2,12 +2,16 @@ import { ThumbUpIcon } from '@heroicons/react/outline';
 import Image from 'next/image'
 import React, { forwardRef } from 'react'
 
+const myLoader = ({ src, width, quality }) => {
+    return `https://image.tmdb.org/t/p/original${src}`
+  }
 
 const Thumbnail = forwardRef(({data},ref) => {
-    const BASE_URL = "https://image.tmdb.org/t/p/original/";
+    const BASE_URL = "";
     return (
         <div ref={ref} className='group block cursor-pointer p-2 transition duration-200 ease-in transform sm:hover:scale-105 hover:z-50'>
            <Image
+            loader={myLoader}
               layout='responsive'
               src={`${BASE_URL}${data.poster_path || data.backdrop_path} `}
               width={4}
